@@ -1,0 +1,12 @@
+<% title "Keyword" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @keyword.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_keyword_path(@keyword) %> |
+  <%= link_to "Destroy", @keyword, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", keywords_path %>
+</p>

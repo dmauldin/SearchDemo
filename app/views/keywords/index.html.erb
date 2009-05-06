@@ -1,0 +1,17 @@
+<% title "Keywords" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for keyword in @keywords %>
+    <tr>
+      <td><%=h keyword.name %></td>
+      <td><%= link_to "Show", keyword %></td>
+      <td><%= link_to "Edit", edit_keyword_path(keyword) %></td>
+      <td><%= link_to "Destroy", keyword, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Keyword", new_keyword_path %></p>
